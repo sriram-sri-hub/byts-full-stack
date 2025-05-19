@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #050505;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('./seamless-pattern-with-school-office-stationery_107791-9568.avif');
+}
+
+.calculator {
+  background: #fcd2b4;
+  padding: 30px;
+  border-radius: 2.2px;
+  box-shadow:0 10px 20px , coral;
+  width: 250px;
+  height: 400px;
+}
+
+.display {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 15px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 1px solid #f59505;
+  box-shadow: rgb(238, 236, 236);
+  border-radius: 8px;
+  color:#060606;
+}
+#title{
+  display: flex;
+  padding-bottom: 10px;
+  font-size: medium;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 21px;
+}
+
+button {
+  height: 50px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fb5b0be4;
+  margin: 1.3%;
+}
+
+button.clear {
+  grid-column: span 4;
+  background-color: #ed5f18f6;
+  color: rgba(13, 13, 13, 0.771);
+  margin: 1.4%;
+}
+

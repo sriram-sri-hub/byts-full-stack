@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addition</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    }
+
+    .con {
+      width: 350px;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      color: #444;
+      margin-top: 10px;
+    }
+
+    button {
+        margin: 1.1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+    }
+    #result {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #333;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="con">
+    <h1>Add Two Numbers</h1>
+    <label for="NUM1">NUM1</label>
+    <input type="number" id="NUM1">
+    
+    <label for="NUM2">NUM2</label>
+    <input type="number" id="NUM2">
+    
+    <button onclick="add()">ADD</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function add() {
+      var a = document.getElementById('NUM1').value;
+      var b = document.getElementById('NUM2').value;
+      var sum = parseInt(a) + parseInt(b);
+      document.getElementById('result').textContent = "The sum is: " + sum;
+    }
+  </script>
+</body>
+</html>

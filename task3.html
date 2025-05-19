@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celsius to Fahrenheit Converter</title>
+</head>
+<body>
+  <div class="=con">
+  <h1>Celsius to Fahrenheit Converter</h1>
+  <label for="celsius">Celsius:</label>
+  <input type="number" id="celsius" />
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+  </div>
+  <style>
+     body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+            height: 10opx;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            background: linear-gradient(135deg, #040231, #66a6ff);
+          background-size: cover;
+          height: 100vh;
+    }
+
+    .con {
+      width: 350px;
+      padding: 2rem;
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #f8f0f0;
+      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+    }
+    input {
+      width: 50%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    label {
+      display: flex;
+      font-weight: bold;
+      color: #fdf9f9;
+      margin-bottom: 0.5rem;
+      font-size: 1.9rem;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #ff5e00;
+      border: none;
+      border-radius: 8px;
+    }
+
+    #result {
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+      color: #f9f6f6;
+      font-weight: 600;
+    }
+  </style>
+  </style>
+  <script>
+    function convert() {
+      const celsius=parseFloat(document.getElementById('celsius').value);
+      if (isNaN(celsius)) {
+        document.getElementById('result').textContent = 'Please enter a valid number.';
+        return;
+      }
+      const fahrenheit = (celsius * 9/5) + 32;
+      document.getElementById('result').textContent = "Fahrenheit = "+ fahrenheit;
+    }
+  </script>
+</body>
+</html>
+
+
